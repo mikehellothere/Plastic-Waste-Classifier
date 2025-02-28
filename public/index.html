@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Waste Classifier</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Plastic Waste Classifier</h1>
+            <p>Take a picture of plastic waste to identify its type</p>
+        </header>
+        
+        <main>
+            <div class="camera-container">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+                <div class="controls">
+                    <button id="capture-btn">Take Photo</button>
+                    <button id="switch-camera-btn">Switch Camera</button>
+                </div>
+            </div>
+            
+            <div class="results-container" style="display: none;">
+                <h2>Analysis Results</h2>
+                <div class="captured-image">
+                    <img id="captured-image" src="" alt="Captured image">
+                </div>
+                <div id="prediction-result" class="prediction-result">
+                    <div class="loading">Analyzing image...</div>
+                </div>
+                <button id="try-again-btn">Try Again</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 Plastic Waste Classifier</p>
+        </footer>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
